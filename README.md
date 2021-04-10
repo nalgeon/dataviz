@@ -4,6 +4,8 @@ Based on [International Business Communication Standards](https://www.ibcs.com/s
 
 This is a highly practical and example-based guide on visually representing data in reports and dashboards. It is based on the work of authors such as Barbara Minto, Edward Tufte, and Stephen Few.
 
+![Chart Sample](docs/img/sample.png)
+
 The guide consists of seven chapters:
 
 1. [Convey a message](docs/01-say.md)
