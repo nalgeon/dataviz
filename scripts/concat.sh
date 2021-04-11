@@ -1,7 +1,8 @@
 cp -r docs/img build
 cp docs/epub.css build
+cp docs/pdf.css build
 cat \
-  docs/title.md \
+  docs/00-title.md \
   docs/01-say.md \
   docs/02-structure.md \
   docs/04-express.md \
@@ -9,7 +10,7 @@ cat \
   docs/06-condense.md \
   docs/07-check.md \
   docs/09-unify.md \
-  docs/epilogue.md \
+  docs/10-epilogue.md \
   > build/data-visualization-guide.md
 cd build
 sed -E -e 's/docs\///g' -i '' data-visualization-guide.md

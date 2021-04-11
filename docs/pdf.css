@@ -1,0 +1,198 @@
+body {
+    margin: 5%;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Oxygen, Ubuntu, Cantarell, "PT Sans", "Open Sans", "Fira Sans",
+        "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: medium;
+    line-height: 1.6;
+}
+code {
+    font-family: Consolas, "Lucida Console", Monaco, monospace;
+}
+
+/* 1.0 CSS to make A4 print preview as default web view */
+@media screen {
+    .pagedjs_pages {
+        display: flex;
+        width: calc(var(--pagedjs-width));
+        flex: 0;
+        flex-wrap: wrap;
+        margin: 0 auto;
+        justify-content: center;
+    }
+
+    .pagedjs_page {
+        margin: 10mm;
+        border: solid 1px gray;
+    }
+}
+
+/* 2.0 General Formatting */
+h1 {
+    border-bottom: 1px solid black;
+    margin-bottom: 2rem;
+    padding-bottom: 0.5rem;
+    line-height: 1.2;
+}
+h2 {
+    border-bottom: 0.1875rem solid black;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    line-height: 1.2;
+}
+h3 {
+    line-height: 1.2;
+}
+p {
+    text-align: justify;
+    hyphens: auto;
+}
+a {
+    color: #347dbd;
+}
+a:hover {
+    color: #fc814a;
+}
+mark {
+    color: purple;
+    background-color: inherit;
+}
+light-mark {
+    color: purple;
+}
+img {
+    max-width: calc(100% - 3rem);
+    border: 1px solid #eaeaea;
+    padding: 1rem;
+}
+.img-75mm {
+    height: 75mm;
+}
+
+center {
+    border: 0.5px solid gray;
+    padding: 1.5rem;
+}
+
+pre {
+    background-color: #f0f0f0;
+    padding: 1rem;
+    font-size: smaller;
+    white-space: pre-wrap;
+}
+code {
+    display: block;
+}
+figure {
+    margin-inline-start: 0rem;
+    margin-inline-end: 0rem;
+    break-inside: avoid;
+}
+figcaption {
+    caption-side: top;
+    color: gray;
+}
+
+/* 3.1 Page Size */
+@page {
+    size: A4;
+}
+
+/* 3.2 Page Breaks */
+.page-break {
+    break-after: page;
+}
+.avoid-break {
+    break-inside: avoid;
+}
+h2:not(.no-break) {
+    break-before: page;
+    margin-block-start: 0rem;
+    margin-block-end: 1.66rem;
+}
+h2.no-break:not(.top) {
+    margin-block-start: 3rem;
+    margin-block-end: 1.66rem;
+}
+h2.top {
+    margin-block-start: 0rem;
+    margin-block-end: 1.66rem;
+}
+
+h3:not(.top) {
+    margin-block-start: 2.49rem;
+    margin-block-end: 0.83rem;
+}
+h3.top {
+    margin-block-start: 1.66rem;
+    margin-block-end: 0.83rem;
+}
+
+/* 3.3 Page Numbers */
+@page {
+    @bottom-right {
+        content: counter(page);
+    }
+}
+
+/* We use the counter-reset class to prevent the page
+numbers starting from the cover page, but rather
+from the next page (table of contents) */
+.counter-reset {
+    counter-reset: page 1;
+}
+
+/* 4.1 Automatic Counters */
+body {
+    counter-reset: sectionNumber;
+    counter-reset: subsectionNumber;
+    counter-reset: figureNumber;
+}
+
+/* 4.2 Headers & Footers */
+.footer {
+    position: running(footerRunning);
+}
+@page {
+    @bottom-left {
+        content: element(footerRunning);
+        width: 80mm;
+    }
+}
+
+h2 {
+    string-set: section content(text);
+}
+h3 {
+    string-set: subsection content(text);
+}
+@page {
+    @top-right {
+        content: string(section);
+        /* ALT: content: string(section) " - " string(subsection); */
+    }
+}
+
+/* 4.3 Cover Pages */
+.cover-page {
+    page: cover-page;
+}
+.cover-page h1 {
+    border-bottom: 0.25rem solid white;
+}
+.cover-page h3 {
+    font-weight: normal;
+}
+@page cover-page {
+    background-color: #2385fb; /*347dbd;*/
+    color: white;
+    @top-right {
+        content: none;
+    }
+    @bottom-left {
+        content: none;
+    }
+    @bottom-right {
+        content: none;
+    }
+}
