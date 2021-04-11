@@ -1,6 +1,6 @@
 # Data Visualization Guide for Presentations, Reports, and Dashboards
 
-Based on [International Business Communication Standards](https://www.ibcs.com/standards/) 1.1 by [IBCS Association](https://www.ibcs.com/), licensed under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/). Adapted for the web and other formats by [Anton Zhiyanov](https://antonz.org/).
+_Based on [International Business Communication Standards](https://www.ibcs.com/standards/) 1.1 by [IBCS Association](https://www.ibcs.com/), licensed under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/). Adapted for the web and other formats by [Anton Zhiyanov](https://antonz.org/)._
 
 This is a highly practical and example-based guide on visually representing data in reports and dashboards. It is based on the work of authors such as Barbara Minto, Edward Tufte, and Stephen Few.
 
