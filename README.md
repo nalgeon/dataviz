@@ -19,3 +19,5 @@ The guide consists of seven chapters:
 Applied together, they will help you to design concise, clear, and actionable reports.
 
 The guide is also available as [EPUB](https://github.com/nalgeon/dataviz/releases/download/1.1/data-visualization-guide.epub) and [PDF](https://github.com/nalgeon/dataviz/releases/download/1.1/data-visualization-guide.pdf).
+
+_Follow [@ohmypy](https://twitter.com/ohmypy) on Twitter for updates 🚀_
